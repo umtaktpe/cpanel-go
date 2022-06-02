@@ -20,7 +20,7 @@ import (
 
 func main() {
 	config := cpanel.NewConfig("username", "password")
-    client := client.NewClient(config)
+    	client := client.NewClient(config)
 
 
 	params := &model.LicenseInfoParams{
