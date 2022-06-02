@@ -24,7 +24,7 @@ func main() {
 
 	params := &model.LicenseInfoParams{
 		Expired: "0",
-		GroupId: "groupid",
+		GroupID: "groupid",
 	}
 
 	response, err := client.LicenseInfo(params)

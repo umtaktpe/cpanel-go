@@ -61,7 +61,7 @@ type UpdateGroupParams struct {
 	Package    string `json:"package"`
 	PackageID  string `json:"packageid"`
 	OldGroup   string `json:"oldgroup"`
-	OldGroupId string `json:"oldgroupid"`
+	OldGroupID string `json:"oldgroupid"`
 	Group      string `json:"group"`
 	GroupID    string `json:"groupid"`
 }
