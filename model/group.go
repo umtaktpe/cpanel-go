@@ -21,3 +21,52 @@ type GetGroupsResponse struct {
 	} `json:"group"`
 	Reason string `json:"reason"`
 }
+
+type AddGroupParams struct {
+	Group     string `json:"group"`
+	MainGroup string `json:"maingroup"`
+	Country   string `json:"country"`
+	StateProv string `json:"stateprov"`
+	City      string `json:"city"`
+	Postcode  string `json:"postcode"`
+	Addr1     string `json:"addr1"`
+	Addr2     string `json:"addr2"`
+}
+
+type AddGroupResponse struct {
+	Reason string `json:"reason"`
+	Status int    `json:"status"`
+}
+
+type EditGroupParams struct {
+	Group     string `json:"group"`
+	GroupID   string `json:"groupid"`
+	NewGroup  string `json:"newgroup"`
+	MainGroup string `json:"maingroup"`
+	Country   string `json:"country"`
+	StateProv string `json:"stateprov"`
+	City      string `json:"city"`
+	Postcode  string `json:"postcode"`
+	Addr1     string `json:"addr1"`
+	Addr2     string `json:"addr2"`
+}
+
+type EditGroupResponse struct {
+	Reason string `json:"reason"`
+	Status int    `json:"status"`
+}
+
+type UpdateGroupParams struct {
+	Ip         string `json:"ip"`
+	Package    string `json:"package"`
+	PackageID  string `json:"packageid"`
+	OldGroup   string `json:"oldgroup"`
+	OldGroupId string `json:"oldgroupid"`
+	Group      string `json:"group"`
+	GroupID    string `json:"groupid"`
+}
+
+type UpdateGroupResponse struct {
+	Reason string `json:"reason"`
+	Status int    `json:"status"`
+}
