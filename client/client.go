@@ -28,7 +28,7 @@ func NewClient(config *cpanel.Config) *client {
 }
 
 func (c *client) request(method, endpoint string, params, response interface{}) error {
-	request, err := http.NewRequest(method, baseURL+endpoint, nil)
+	request, err := http.NewRequest(method, baseURL+endpoint+"?output=json", nil)
 	if err != nil {
 		return err
 	}

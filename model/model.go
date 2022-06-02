@@ -7,7 +7,6 @@ type LicenseInfoParams struct {
 	Maxage    string `json:"maxage"`
 	PackageId string `json:"packageid"`
 	Package   string `json:"package"`
-	Output    string `json:"output"`
 }
 
 type LicenseInfoResponse struct {
@@ -21,7 +20,6 @@ type SearchLicenseIDParams struct {
 	Ip        string `json:"ip"`
 	PackageId string `json:"packageid"`
 	All       string `json:"all"`
-	Output    string `json:"output"`
 }
 
 type SearchLicenseIDResponse struct {
@@ -32,7 +30,6 @@ type SearchLicenseIDResponse struct {
 
 type GetGroupsParams struct {
 	Expand string `json:"expand"`
-	Output string `json:"output"`
 }
 
 type GetGroupsResponse struct {
