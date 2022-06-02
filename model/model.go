@@ -28,24 +28,27 @@ type SearchLicenseIDResponse struct {
 	Licenseid int    `json:"licenseid"`
 }
 
-type GetGroupsParams struct {
+type PackageInfoParams struct {
 	Expand string `json:"expand"`
 }
 
-type GetGroupsResponse struct {
-	Version float64           `json:"version"`
-	Status  int               `json:"status"`
-	Groups  map[string]string `json:"groups"`
-	Group   []struct {
-		Country   interface{} `json:"country"`
-		Name      string      `json:"name"`
-		Addr2     interface{} `json:"addr2"`
-		City      interface{} `json:"city"`
-		Stateprov interface{} `json:"stateprov"`
-		Addr1     interface{} `json:"addr1"`
-		Groupid   string      `json:"groupid"`
-		Postcode  interface{} `json:"postcode"`
-		Maingroup int         `json:"maingroup"`
-	} `json:"group"`
-	Reason string `json:"reason"`
+type PackageInfoResponse struct {
+	Packages map[string]string `json:"packages"`
+	Version  float64           `json:"version"`
+	Status   int               `json:"status"`
+	Reason   string            `json:"reason"`
+}
+
+type GetRiskDataParams struct {
+	Ip string `json:"ip"`
+}
+
+type GetRiskDataResponse struct {
+	Version                   int    `json:"version"`
+	Status                    int    `json:"status"`
+	Reason                    string `json:"reason"`
+	Clientreportingurl        string `json:"clientreportingurl"`
+	RiskscoreMainScore        int    `json:"riskscore.main.score"`
+	RiskscoreDirectorderScore int    `json:"riskscore.directorder.score"`
+	RiskscoreAggregateScore   int    `json:"riskscore.aggregate.score"`
 }

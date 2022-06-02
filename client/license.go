@@ -19,3 +19,21 @@ func (c *client) SearchLicenseID(params *model.SearchLicenseIDParams) (*model.Se
 
 	return response, nil
 }
+
+func (c *client) PackageInfo(params *model.PackageInfoParams) (*model.PackageInfoResponse, error) {
+	response := &model.PackageInfoResponse{}
+	if err := c.request("GET", "/XMLpackageInfo.cgi", params, response); err != nil {
+		return nil, err
+	}
+
+	return response, nil
+}
+
+func (c *client) GetRiskData(params *model.GetRiskDataParams) (*model.GetRiskDataResponse, error) {
+	response := &model.GetRiskDataResponse{}
+	if err := c.request("GET", "/XMLsecverify.cgi", params, response); err != nil {
+		return nil, err
+	}
+
+	return response, nil
+}
